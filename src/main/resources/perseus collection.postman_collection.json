@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "678e3ed0-c8fd-4d68-9d2c-d75809984775",
+		"name": "perseus collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/api/v1/users/create",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7001/api/v1/users/create",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"create"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "find user by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/api/v1/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get user by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7001/api/v1/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        {\n            \"id\": 1,\n            \"mail\": \"enyinwa.vincent@gmail.com1\"\n        }\n    ],\n    \"phoneNumbers\": [\n        {\n            \"id\": 1,\n            \"phoneNumber\": \"+23481632736111\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "find user by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/api/v1/users/find?firstName=&lastName=enyinwa1",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"find"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": ""
+						},
+						{
+							"key": "lastName",
+							"value": "enyinwa1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "find user by name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7001/api/v1/users/find?firstName=&lastName=enyinwa1",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"find"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": ""
+								},
+								{
+									"key": "lastName",
+									"value": "enyinwa1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"result \": [\n        {\n            \"id\": 1,\n            \"lastName\": \"enyinwa1\",\n            \"firstName\": \"vincent1\",\n            \"emails\": [\n                {\n                    \"id\": 1,\n                    \"mail\": \"enyinwa.vincent@gmail.com1\"\n                }\n            ],\n            \"phoneNumbers\": [\n                {\n                    \"id\": 1,\n                    \"phoneNumber\": \"+23481632736111\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "delete user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/api/v1/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add email to user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/api/v1/contact/2/add-email?email=enyinwa.vincent@outlook.com",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"v1",
+						"contact",
+						"2",
+						"add-email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "enyinwa.vincent@outlook.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add phonenumber to user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/api/v1/contact/2/add-phone-number?phoneNumber=1234556",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"v1",
+						"contact",
+						"2",
+						"add-phone-number"
+					],
+					"query": [
+						{
+							"key": "phoneNumber",
+							"value": "1234556"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user phonenumber",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/api/v1/contact/1/phone-number/1?phoneNumber=1234556",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"v1",
+						"contact",
+						"1",
+						"phone-number",
+						"1"
+					],
+					"query": [
+						{
+							"key": "phoneNumber",
+							"value": "1234556"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user email",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lastName\": \"enyinwa1\",\n    \"firstName\": \"vincent1\",\n    \"emails\": [\n        \"enyinwa.vincent@gmail.com1\"\n    ],\n    \"phoneNumbers\": [\n        \"+23481632736111\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/api/v1/contact/1/email/1?email=enyinwa.vincent@aol.com",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"v1",
+						"contact",
+						"1",
+						"email",
+						"1"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "enyinwa.vincent@aol.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

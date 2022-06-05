@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  server:
+    container_name: perseus
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./tmp/app:/usr/src/app
+    ports:
+      - "7001:7001"
