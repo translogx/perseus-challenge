@@ -1,6 +1,6 @@
 package com.perseus.challenge.usercontact.controllers;
 
-import com.perseus.challenge.usercontact.Interface.UserContactService;
+import com.perseus.challenge.usercontact.service.UserContactServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1/contact/{userId}")
 public class UserContactController {
 
-    private final UserContactService userContactService;
+    private final UserContactServiceImpl userContactService;
 
     @PostMapping(value = "/add-email", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void addEmail(@PathVariable(name = "userId") int userId,

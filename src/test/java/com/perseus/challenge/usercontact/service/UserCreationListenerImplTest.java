@@ -1,8 +1,6 @@
 package com.perseus.challenge.usercontact.service;
 
 import com.perseus.challenge.testutils.TestUtil;
-import com.perseus.challenge.user.models.UserEntity;
-import com.perseus.challenge.usercontact.Interface.UserContactService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,7 +11,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
@@ -26,7 +25,7 @@ class UserCreationListenerImplTest {
     private UserCreationListenerImpl userCreationListener;
 
     @Mock
-    private UserContactService userContactService;
+    private UserContactServiceImpl userContactService;
 
     @Test
     void onCreateUser() {

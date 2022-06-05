@@ -3,7 +3,6 @@ package com.perseus.challenge.usercontact.service;
 import com.perseus.challenge.exceptionHandlers.NotFoundException;
 import com.perseus.challenge.user.models.UserEntity;
 import com.perseus.challenge.user.repository.UserRepository;
-import com.perseus.challenge.usercontact.Interface.UserContactService;
 import com.perseus.challenge.usercontact.models.EmailEntity;
 import com.perseus.challenge.usercontact.models.PhoneNumberEntity;
 import com.perseus.challenge.usercontact.repository.EmailRepository;
@@ -18,7 +17,7 @@ import java.util.List;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class UserContactServiceImpl implements UserContactService {
+public class UserContactServiceImpl {
 
     private final UserRepository userRepository;
 
@@ -27,7 +26,6 @@ public class UserContactServiceImpl implements UserContactService {
     private final PhoneNumberRepository phoneNumberRepository;
 
     @Transactional
-    @Override
     public void addPhoneNumber(int id, String phoneNumber) {
         UserEntity user = getUserById(id);
 
@@ -38,7 +36,6 @@ public class UserContactServiceImpl implements UserContactService {
     }
 
     @Transactional
-    @Override
     public void addEmail(int id, String email) {
        UserEntity user = getUserById(id);
         EmailEntity newEmail = new EmailEntity();
@@ -49,7 +46,6 @@ public class UserContactServiceImpl implements UserContactService {
 
     }
 
-    @Override
     public void updatePhoneNumber(int userId, int phoneNumberId, String updatedPhoneNumber) {
         UserEntity user = getUserById(userId);
        PhoneNumberEntity phoneNumber = user.getPhoneNumbers().stream().filter(e -> e.getId() == phoneNumberId).findFirst()
@@ -59,7 +55,6 @@ public class UserContactServiceImpl implements UserContactService {
        phoneNumberRepository.save(phoneNumber);
     }
 
-    @Override
     public void updateEmail(int userId, int emailId, String updatedEmail) {
         UserEntity user = getUserById(userId);
         EmailEntity email = user.getEmails().stream().filter(e -> e.getId() == emailId).findFirst()
@@ -69,7 +64,6 @@ public class UserContactServiceImpl implements UserContactService {
         emailRepository.save(email);
     }
 
-    @Override
     public void deleteUserContacts(List<Integer> userEmailIds, List<Integer> userPhoneNumberIds) {
         emailRepository.deleteAllById(userEmailIds);
         phoneNumberRepository.deleteAllById(userPhoneNumberIds);

@@ -6,6 +6,7 @@ import com.perseus.challenge.user.controllers.UserController;
 import com.perseus.challenge.user.dtos.CreateUserDto;
 import com.perseus.challenge.user.models.UserEntity;
 import com.perseus.challenge.usercontact.Interface.UserContactService;
+import com.perseus.challenge.usercontact.service.UserContactServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -38,7 +39,7 @@ class UserContactControllerTest {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @Mock
-    private UserContactService userContactService;
+    private UserContactServiceImpl userContactService;
 
     @InjectMocks
     private UserContactController userContactController;

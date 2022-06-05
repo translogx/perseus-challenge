@@ -5,8 +5,8 @@ import com.perseus.challenge.exceptionHandlers.ApiAdvice;
 import com.perseus.challenge.exceptionHandlers.RequestException;
 import com.perseus.challenge.exceptionHandlers.ServerRuntimeException;
 import com.perseus.challenge.user.dtos.CreateUserDto;
-import com.perseus.challenge.user.interfaces.UserService;
 import com.perseus.challenge.user.models.UserEntity;
+import com.perseus.challenge.user.service.UserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -39,7 +39,7 @@ class UserControllerTest {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @Mock
-    private UserService userService;
+    private UserServiceImpl userService;
 
     @InjectMocks
     private UserController userController;

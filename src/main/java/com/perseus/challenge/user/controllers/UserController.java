@@ -1,8 +1,8 @@
 package com.perseus.challenge.user.controllers;
 
 import com.perseus.challenge.user.dtos.CreateUserDto;
-import com.perseus.challenge.user.interfaces.UserService;
 import com.perseus.challenge.user.models.UserEntity;
+import com.perseus.challenge.user.service.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +14,7 @@ import java.util.Map;
 @RequestMapping("api/v1/users")
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @PostMapping("/create")
     public UserEntity createUser(@RequestBody CreateUserDto request){
