@@ -2,7 +2,7 @@
 
 ### How to run this  project
 
-- clone the code base from [Github](https://redislabs.com/).
+- clone the code base from [Github](https://github.com/translogx/perseus-challenge).
 - change directory into project root in your terminal. ``cd perseus-challenge``
 - run ``docker-compose up -d --remove-orphans --build``
 
